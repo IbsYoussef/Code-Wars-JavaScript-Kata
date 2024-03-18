@@ -1,4 +1,3 @@
-function findNeedle(haystack) {
-  let needle = haystack.indexOf('needle')
-  return `found the needle at position ${needle}`
+findNeedle = haystack => {
+  return `found the needle at position ${haystack.indexOf('needle')}`
 }
