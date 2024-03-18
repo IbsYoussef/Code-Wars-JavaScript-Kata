@@ -1,4 +1,5 @@
 // 6kyu level
+// Past solution/Solutions
 
 function duplicateCount(text){
     let x = text.toLowerCase()
