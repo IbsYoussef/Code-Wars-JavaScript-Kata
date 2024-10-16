@@ -1,27 +1,32 @@
 
 const divisors = (integer) => {
-    let isPrime = false;
+    if (isPrime(integer)) return '(integer) is prime';
+
+    let divisors = [];
+
+    for (let i = 2; i < integer; i++) {
+        if (integer % i === 0) {
+            divisors.push(i);
+        }
+    }
+
+    return divisors;
 
 }
 
-// PseudoCode
-/* 
-1: Check if number is prime, if it is prime return prime message.
+const isPrime = (n) => {
+    if (n <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
 
-First create a flag for the prime and set it to false, then check if number is prime, if true set to true and then return message.
-
-2: Once verified n is not prime, create array to store divisor results 
-
-3: Cycle through numbers divisors with a for loop
-
-4: Append each valid divisor to array 
-
-5: Return Array result
-
-
-
-
-
-*/
-
-///////
+// Test cases
+console.log(divisors(12));  // Should return [2, 3, 4, 6]
+console.log(divisors(25));  // Should return [5]
+console.log(divisors(13));  // Should return '13 is prime'
+console.log(divisors(24));  // Should return [2, 3, 4, 6, 8, 12]
+console.log(divisors(1));   // Should return []
+console.log(divisors(37));  // Should return '37 is prime'
+console.log(divisors(100)); // Should return [2, 4, 5, 10, 20, 25, 50]
