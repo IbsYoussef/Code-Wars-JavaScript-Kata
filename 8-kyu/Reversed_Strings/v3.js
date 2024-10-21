@@ -1,6 +1,6 @@
 /*
 Kata: Reversed Strings
-Link: 
+Link: https://www.codewars.com/kata/5168bb5dfe9a00b126000018
 Description: Complete the solution so that it reverses the string passed into it.
 
 Examples:
@@ -30,3 +30,21 @@ function solution(str) {
 console.log(solution('world')) // => dlrow
 console.log(solution('word')) // => 'drow'
 console.log(solution('Hello World')) // => "dlroW olleh"
+
+/* 
+
+CodeWars Test Cases:
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Basic tests", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(solution('world'), 'dlrow');
+    assert.strictEqual(solution('hello'), 'olleh');
+    assert.strictEqual(solution(''), '');
+    assert.strictEqual(solution('h'), 'h');
+  });
+});  
+
+*/
